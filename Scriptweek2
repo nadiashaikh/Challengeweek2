@@ -5,6 +5,33 @@ You may notice that the application uses an SQL database. This needs to be in a 
 Flask-App - (https://gitlab.com/qacdevops/trio-task/-/tree/master)
 
 - pwd
+- mkdir trio-task
 - git clone https://github.com/qacdevops/trio-task/-/tree/manster.git
-- cd trio-task/
-- vim flask-app
+- touch flask
+- cd flash/
+- vim flask
+FROM python:3.7
+
+COPY ..
+RUN pip install flask flask_sqlalchemy pymysql
+EXPOSE 5000
+ENTRYPOINT {"python", "app.py"}
+:qw
+- cat app.py
+- sudo docker build -t trio-task.
+- sudo docker run -d -p 5000:5000 --name trio-task trio-task
+- sudo docker ps
+- sudo docker search mysql
+- mkdir SQLAlchemy
+- cd SQLAlchemy
+- touch SQLAlchemy
+- export SQLALCHEMY_DATABASE_URI=${nadia}
+- sudo docker run --env mysql+pymysql://root=${SQLALCHEMY_DATABASE_URI} -d -p 3306:3306 --name sqlalchemy pymysql sqlalchemy pymysql
+
+
+in the script change the line as below as the password need to be secret.
+
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:[SQLALCHEMY_DATABASE_URI]@mysql:3306/flask-db'
+    
+
+ 
