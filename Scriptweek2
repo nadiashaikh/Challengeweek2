@@ -1,1 +1,10 @@
+#Task
 
+Here is a Flask app. Your tasks is to run this application in a Docker container.
+You may notice that the application uses an SQL database. This needs to be in a separate container. All secrets should be secure and not publicly available.
+Flask-App - (https://gitlab.com/qacdevops/trio-task/-/tree/master)
+
+- pwd
+- git clone https://github.com/qacdevops/trio-task/-/tree/manster.git
+- cd trio-task/
+- vim flask-app
